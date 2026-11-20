@@ -1,0 +1,133 @@
+/* Witness RSVP Form Box, Pill Controls & Feedback Modal */
+.section-rsvp-ivory { background: var(--color-ivory); }
+
+.editorial-rsvp-box {
+    background: var(--color-pearl);
+    border: 1px solid var(--color-gold-border);
+    border-radius: 20px;
+    padding: 24px 18px;
+    box-shadow: var(--shadow-deep);
+    position: relative;
+}
+
+.editorial-rsvp-box::before {
+    content: none;
+    display: none;
+}
+
+.form-group-editorial { margin-bottom: var(--space-lg); }
+.form-label-editorial {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--color-emerald-deep);
+    margin-bottom: var(--space-xs);
+}
+
+.input-pill-editorial {
+    width: 100%;
+    padding: 0.95rem 1.4rem;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    border: 1px solid var(--color-gold-border);
+    border-radius: 50px;
+    background: #FAF8F5;
+    color: var(--color-ink);
+    outline: none;
+    transition: all var(--speed-fast);
+}
+
+.input-pill-editorial:focus, .textarea-editorial:focus {
+    background: #FFFFFF;
+    border-color: var(--color-gold-champagne);
+    box-shadow: 0 0 0 3px rgba(201, 162, 75, 0.2);
+}
+
+.attendance-toggle-row { display: flex; flex-direction: column; gap: var(--space-xs); }
+.counter-box-editorial {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 10px;
+    background: #FAF8F5;
+    border: 1px solid var(--color-gold-border);
+    border-radius: 50px;
+}
+
+.counter-btn-circle {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    line-height: 1;
+    transition: transform var(--speed-fast), opacity var(--speed-fast);
+}
+.counter-btn-circle.minus { background: #CBD6D4; color: #12302B; }
+.counter-btn-circle.plus { background: var(--color-emerald-deep); color: #FFFFFF; }
+.counter-btn-circle:disabled,
+.counter-btn-circle[disabled] {
+    opacity: 0.35;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+.counter-btn-circle:not(:disabled):hover { transform: scale(1.05); }
+
+.counter-display-indic {
+    font-family: var(--font-body);
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--color-emerald-deep);
+    text-align: center;
+    user-select: none;
+    transition: color var(--speed-fast), font-size var(--speed-fast);
+}
+
+.counter-display-indic.is-zero {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-gold-text);
+}
+
+.textarea-editorial {
+    width: 100%;
+    padding: var(--space-sm) var(--space-md);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    border: 1px solid var(--color-gold-border);
+    border-radius: 18px;
+    background: #FAF8F5;
+    color: var(--color-ink);
+    outline: none;
+    resize: vertical;
+}
+
+.rsvp-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(11, 46, 42, 0.85);
+    backdrop-filter: blur(6px);
+    z-index: 999999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-md);
+}
+.rsvp-modal.active { display: flex; animation: fadeIn 0.3s ease; }
+
+.rsvp-modal-content {
+    background: var(--color-pearl);
+    border: 1px solid var(--color-gold-champagne);
+    padding: var(--space-2xl) var(--space-xl);
+    text-align: center;
+    max-width: 480px;
+    width: 100%;
+    box-shadow: var(--shadow-deep);
+}

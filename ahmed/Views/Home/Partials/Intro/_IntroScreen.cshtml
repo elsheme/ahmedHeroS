@@ -1,0 +1,29 @@
+@model AhmedHeroWedding.Models.WeddingPageViewModel
+@* Opening Gate: Sealed Contract Screen with 3D Envelope *@
+<div id="envelope-overlay" role="dialog" aria-modal="true" aria-label="وثيقة عقد القران المبارك">
+    <div class="envelope-ambient-bg"></div>
+
+    <!-- Skip Intro Button -->
+    <button id="skip-intro-btn" class="skip-intro-btn" aria-label="@Model.Config.Ui.SkipIntroBtn">
+        <span>@Model.Config.Ui.SkipIntroBtn</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="15 18 9 12 15 6"/>
+        </svg>
+    </button>
+
+    <!-- 3D Envelope Stage Partial -->
+    <partial name="Partials/Intro/_EnvelopeStage" model="Model" />
+
+    <!-- Open Invitation Actions -->
+    <div class="envelope-actions">
+        <button id="open-invitation-btn" class="open-invitation-btn" aria-label="@Model.Config.Ui.OpenInvitationBtn">
+            <svg class="btn-icon-seal" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <circle cx="12" cy="12" r="9"/>
+                <circle cx="12" cy="12" r="4"/>
+                <path d="M12 3v3M12 18v3M3 12h3M18 12h3"/>
+            </svg>
+            <span>@Model.Config.Ui.OpenInvitationBtn</span>
+        </button>
+        <p class="open-invitation-subtitle">« @Model.Couple.FooterNote »</p>
+    </div>
+</div>

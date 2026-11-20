@@ -1,0 +1,38 @@
+@model AhmedHeroWedding.Models.WeddingPageViewModel
+
+<div class="compact-details-unified-card reveal-on-scroll">
+    <!-- صف المكان -->
+    <div class="details-compact-row">
+        <div class="details-compact-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+        </div>
+        <div class="details-compact-info">
+            <h3 class="details-compact-title">@Model.Config.Ui.VenueCardHeading</h3>
+            <div class="details-compact-venue-name">@Model.Event.HallName</div>
+            <div class="details-compact-muted">@Model.Event.HotelName</div>
+            <div class="details-compact-muted">@Model.Event.CityAddress</div>
+        </div>
+    </div>
+
+    <!-- فاصل ذهبي رفيع 1px بنسبة 30% -->
+    <div class="details-compact-separator" aria-hidden="true"></div>
+
+    <!-- صف الموعد -->
+    <div class="details-compact-row">
+        <div class="details-compact-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+        </div>
+        <div class="details-compact-info">
+            <h3 class="details-compact-title">@Model.Config.Ui.TimeCardHeading</h3>
+            <div class="details-compact-primary-date">@Model.Event.DayName، @Model.Event.FormattedDate</div>
+            <div class="details-compact-muted">الموافق @Model.Event.FormattedHijriDate</div>
+            <div class="details-compact-time-highlight">@Model.Event.FormattedTime</div>
+        </div>
+    </div>
+</div>

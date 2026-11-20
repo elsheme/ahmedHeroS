@@ -1,0 +1,16 @@
+@model AhmedHeroWedding.Models.WeddingPageViewModel
+
+<div id="rsvp-modal-feedback" class="rsvp-modal" role="dialog" aria-modal="true" aria-label="تأكيد الشهادة">
+    <div class="rsvp-modal-content pointed-arch-frame" style="border-radius: 140px 140px 20px 20px;">
+        <div class="details-icon-emblem" style="margin-inline: auto;">
+            <partial name="Partials/_Icon" model='("check", 24, "svg-icon")' />
+        </div>
+        <h3 class="font-display" style="font-size: 2.2rem; color: var(--color-emerald-deep); margin-bottom: 0.8rem;">@Model.Config.Ui.ModalSuccessTitle</h3>
+        <p id="rsvp-feedback-message" style="font-size: 1.15rem; color: var(--color-muted); margin-bottom: 1.8rem;"></p>
+        <button id="rsvp-modal-close" class="btn-luxury-primary" style="padding-inline: 2.5rem;">
+            <span>@Model.Config.Ui.ModalCloseBtn</span>
+        </button>
+    </div>
+</div>
+
+<div id="duaa-feedback-toast" class="duaa-feedback-toast" role="status"></div>

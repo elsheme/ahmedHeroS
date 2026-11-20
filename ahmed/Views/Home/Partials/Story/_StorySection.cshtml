@@ -1,0 +1,24 @@
+@model AhmedHeroWedding.Models.WeddingPageViewModel
+
+<section id="story" class="section-story-ivory">
+    <div class="section-container">
+        <h2 class="section-title-editorial" style="color: var(--color-emerald-deep);">@Model.Config.Ui.StoryTitle</h2>
+
+        <div class="story-timeline-grid reveal-on-scroll">
+            @for (int i = 0; i < Model.StoryMoments.Count; i++)
+            {
+                var moment = Model.StoryMoments[i];
+                <div class="story-card-wrapper" data-index="@i">
+                    <partial name="Partials/Story/_StoryCard" model='(moment, Model.Couple.MonogramText)' />
+                </div>
+            }
+        </div>
+
+        <!-- 3 Pagination Dots synced with scroll-snap -->
+        <div class="story-pagination-dots" role="tablist" aria-label="محطات حكايتنا">
+            <button type="button" class="story-dot-btn active" data-target="0" role="tab" aria-selected="true" aria-label="المحطة ١"></button>
+            <button type="button" class="story-dot-btn" data-target="1" role="tab" aria-selected="false" aria-label="المحطة ٢"></button>
+            <button type="button" class="story-dot-btn" data-target="2" role="tab" aria-selected="false" aria-label="المحطة ٣"></button>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,18 @@
+@model AhmedHeroWedding.Models.WeddingPageViewModel
+
+<section id="witnesses" class="section-rsvp-ivory">
+    <div class="section-container-narrow">
+        <partial name="Partials/_SectionHeader" model='(Model.Config.Ui.GuestbookEyebrow, Model.Config.Ui.GuestbookTitle)' />
+        <partial name="Partials/Guestbook/_DuaBanner" model="Model" />
+        <partial name="Partials/Guestbook/_RsvpForm" model="Model" />
+    </div>
+</section>
+
+<partial name="Partials/Guestbook/_RsvpFeedbackModal" model="Model" />
+
+<section id="guestbook" class="section-guestbook-cream">
+    <div class="section-container">
+        <partial name="Partials/_SectionHeader" model='(Model.Config.Ui.GuestbookEyebrow, Model.Config.Ui.GuestbookTitle)' />
+        <partial name="Partials/Guestbook/_WishesFeed" model="Model.RecentWishes" />
+    </div>
+</section>

@@ -1,0 +1,88 @@
+/* Witness Signature Pad (Canvas, Drawing Tools & Calligraphy Preview) */
+.signature-section-wrapper {
+    background: var(--color-pearl);
+    border: 1px solid var(--color-gold-border);
+    border-radius: 16px;
+    padding: var(--space-md);
+    margin-top: var(--space-sm);
+    text-align: right;
+}
+
+.signature-mode-tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: var(--space-sm);
+    border-bottom: 1px solid rgba(201, 162, 75, 0.2);
+    padding-bottom: 8px;
+}
+
+.sig-mode-tab {
+    background: none;
+    border: none;
+    font-family: var(--font-body);
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    padding: 6px 14px;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+}
+
+.sig-mode-tab.active {
+    background: rgba(201, 162, 75, 0.15);
+    color: var(--color-emerald-deep);
+}
+
+.signature-canvas-container {
+    background: #FFFDF9;
+    border: 1px dashed var(--color-gold-champagne);
+    border-radius: 12px;
+    overflow: hidden;
+    touch-action: none;
+}
+
+#signature-canvas {
+    width: 100%;
+    height: 140px;
+    display: block;
+    cursor: crosshair;
+}
+
+.signature-actions-row {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.sig-action-btn {
+    background: none;
+    border: 1px solid rgba(201, 162, 75, 0.35);
+    border-radius: 20px;
+    padding: 4px 12px;
+    font-size: 0.82rem;
+    color: var(--color-text-muted);
+    cursor: pointer;
+}
+
+.sig-action-btn:hover {
+    background: rgba(201, 162, 75, 0.1);
+    color: var(--color-emerald-deep);
+}
+
+.signature-typed-preview-box {
+    margin-top: 10px;
+    background: #FFFDF9;
+    border: 1px dashed var(--color-gold-champagne);
+    border-radius: 12px;
+    padding: var(--space-md);
+    text-align: center;
+}
+
+#sig-typed-preview {
+    font-size: 2.2rem;
+    color: var(--color-emerald-deep);
+    min-height: 48px;
+    line-height: 1.4;
+}

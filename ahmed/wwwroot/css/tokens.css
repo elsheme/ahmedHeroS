@@ -1,0 +1,71 @@
+/* ==========================================================================
+   DESIGN TOKENS - KATB KITAB EDITORIAL LUXURY
+   Strict Token Definitions (No off-palette values)
+   ========================================================================== */
+:root {
+    /* Primary Emerald Palette */
+    --emerald-900: #0B2E2A;
+    --emerald-800: #0F3B33;
+    --emerald-700: #144D43;
+    --color-emerald-deep: #0B2E2A;
+    --color-emerald-dark: #082420;
+    --color-emerald-light: #165349;
+    --color-emerald-card: #0F3B33;
+
+    /* Primary Ivory & Light Palette */
+    --ivory: #FBF7F0;
+    --color-ivory: #FBF7F0;
+    --color-cream-soft: #F5EFEB;
+    --color-pearl: #FFFFFF;
+
+    /* Typographic Ink & Muted Tones */
+    --ink: #12302B;
+    --color-ink: #12302B;
+    --muted: #6B756F;
+    --color-muted: #6B756F;
+    --color-text-body: #2B423E;
+
+    /* Champagne Gold Accents */
+    --gold: #C9A24B;
+    --color-gold-champagne: #C9A24B;
+    --gold-light: #E8D3A0;
+    --color-gold-light: #E8D3A0;
+    --gold-text: #8A6A22;
+    --color-gold-text: #8A6A22;
+    --color-gold-border: rgba(201, 162, 75, 0.45);
+
+    /* Gradients */
+    --grad-gold: linear-gradient(135deg, #F5E8C8 0%, #D4AF57 50%, #A8842E 100%);
+    --grad-emerald-dark: linear-gradient(180deg, #0B2E2A 0%, #061C19 100%);
+    --grad-seal: radial-gradient(circle at 35% 35%, #F4E2BB 0%, #C9A24B 60%, #8A6A22 100%);
+
+    /* Strictly 3 Curated Font Families */
+    --font-display: 'Aref Ruqaa', 'Amiri', serif;
+    --font-quran: 'Amiri Quran', 'Amiri', serif;
+    --font-body: 'IBM Plex Sans Arabic', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+    /* Editorial Spacers */
+    --space-xs: 0.5rem;
+    --space-sm: 0.85rem;
+    --space-md: 1.25rem;
+    --space-lg: 2rem;
+    --space-xl: 3rem;
+    --space-2xl: 4.5rem;
+    --space-3xl: 6.5rem;
+
+    /* Layout Containers */
+    --container-max: 1140px;
+    --container-narrow: 780px;
+
+    /* Elevation & Shadows */
+    --shadow-subtle: 0 4px 20px rgba(11, 46, 42, 0.05);
+    --shadow-card: 0 12px 35px rgba(11, 46, 42, 0.09);
+    --shadow-deep: 0 24px 60px rgba(4, 18, 16, 0.22);
+    --shadow-seal: 0 10px 25px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(255, 255, 255, 0.4);
+
+    /* Transitions & Curves */
+    --ease-editorial: cubic-bezier(0.25, 1, 0.5, 1);
+    --speed-fast: 0.2s;
+    --speed-normal: 0.4s;
+    --speed-slow: 0.8s;
+}

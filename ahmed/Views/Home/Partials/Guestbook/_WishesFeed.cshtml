@@ -1,0 +1,26 @@
+@model IEnumerable<AhmedHeroWedding.Models.GuestbookMessage>
+
+<div id="guestbook-feed" class="editorial-wishes-grid reveal-on-scroll">
+    @{
+        var wishesList = Model?.ToList() ?? new List<AhmedHeroWedding.Models.GuestbookMessage>();
+        for (int i = 0; i < wishesList.Count; i++)
+        {
+            var isHidden = i >= 3;
+            <div class="wish-item-wrapper @(isHidden ? "wish-item-extra is-collapsed" : "")" @(isHidden ? "style=display:none;" : "")>
+                <partial name="Partials/Guestbook/_WishCard" model="wishesList[i]" />
+            </div>
+        }
+    }
+</div>
+
+@if (Model != null && Model.Count() > 3)
+{
+    <div class="wishes-expand-container">
+        <button id="toggle-more-wishes-btn" type="button" class="btn-wishes-expand" aria-expanded="false" aria-controls="guestbook-feed">
+            <span class="btn-wishes-text">عرض المزيد من التهاني</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+        </button>
+    </div>
+}

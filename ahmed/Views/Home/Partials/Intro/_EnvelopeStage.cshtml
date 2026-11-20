@@ -1,0 +1,37 @@
+@model AhmedHeroWedding.Models.WeddingPageViewModel
+@* 3D Wedding Envelope Stage with Ascending Card & Flaps *@
+<div class="envelope-stage">
+    <div id="wedding-envelope" class="wedding-envelope" role="button" tabindex="0" aria-label="انقر لفك الختم وفتح العقد">
+        <!-- Horizontal cord wrapping behind wax seal -->
+        <div class="envelope-horizontal-cord" aria-hidden="true"></div>
+
+        <!-- Backplate -->
+        <div class="envelope-back"></div>
+
+        <!-- Ascending Invitation Card -->
+        <div class="envelope-card">
+            <div class="card-crest-mini">@Model.Couple.MonogramText</div>
+            <p class="card-pre-title">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+            <h2 class="card-names-title">
+                @Model.Couple.GroomName <span>&</span> @Model.Couple.BrideName
+            </h2>
+            <div class="card-date-badge">
+                عقد قران مبارك • @Model.Event.DayName، @Model.Event.FormattedDate
+            </div>
+        </div>
+
+        <!-- Envelope Fold Pockets -->
+        <div class="envelope-pocket-left"></div>
+        <div class="envelope-pocket-right"></div>
+        <div class="envelope-pocket-bottom"></div>
+
+        <!-- 3D Top Flap -->
+        <div class="envelope-flap">
+            <div class="envelope-flap-front"></div>
+            <div class="envelope-flap-back"></div>
+        </div>
+
+        <!-- Royal Wax Seal & Rose Bloom Partial -->
+        <partial name="Partials/Intro/_WaxSeal" model="Model" />
+    </div>
+</div>

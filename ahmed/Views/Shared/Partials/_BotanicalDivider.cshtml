@@ -1,0 +1,19 @@
+@model string?
+@* Botanical Hairline Rose Divider Component *@
+<div class="botanical-section-divider-container @(Model ?? "")" aria-hidden="true">
+    <svg class="botanical-section-divider-svg" viewBox="0 0 260 34">
+        <path class="divider-stem" d="M 115,17 C 85,17 70,12 40,16 C 25,18 10,14 0,17" fill="none" stroke="#C9A24B" stroke-width="1.2" stroke-linecap="round"/>
+        <path class="divider-stem" d="M 145,17 C 175,17 190,12 220,16 C 235,18 250,14 260,17" fill="none" stroke="#C9A24B" stroke-width="1.2" stroke-linecap="round"/>
+        <g class="divider-fills">
+            <path d="M 75,15 C 65,7 55,14 68,19 C 74,18 75,15 75,15 Z" fill="rgba(232,211,160,0.3)" stroke="#C9A24B" stroke-width="1"/>
+            <path d="M 185,15 C 195,7 205,14 192,19 C 186,18 185,15 185,15 Z" fill="rgba(232,211,160,0.3)" stroke="#C9A24B" stroke-width="1"/>
+            <circle cx="28" cy="16" r="2.5" fill="#C9A24B"/>
+            <circle cx="232" cy="16" r="2.5" fill="#C9A24B"/>
+            <g transform="translate(116, 3) scale(0.28)">
+                <circle cx="50" cy="50" r="26" fill="rgba(251,247,240,0.95)" stroke="#C9A24B" stroke-width="1.4"/>
+                <path d="M 34,50 C 34,38 66,38 66,50 C 66,62 34,62 34,50 Z" fill="rgba(233,201,192,0.35)" stroke="#C9A24B" stroke-width="1.2"/>
+                <path d="M 42,46 C 42,41 58,41 58,46 C 58,54 42,54 42,46 Z" fill="rgba(232,211,160,0.4)" stroke="#C9A24B" stroke-width="1.2"/>
+            </g>
+        </g>
+    </svg>
+</div>

@@ -1,0 +1,37 @@
+@model AhmedHeroWedding.Models.GuestbookMessage
+
+<div class="editorial-wish-card">
+    <div class="wish-quote-glyph" aria-hidden="true">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="#C9A24B">
+            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+        </svg>
+    </div>
+    
+    <p class="wish-text-body">@Model.MessageText</p>
+    
+    @if (!string.IsNullOrWhiteSpace(Model.SignatureData))
+    {
+        <div class="witness-card-signature">
+            @if (Model.SignatureData.StartsWith("data:image/"))
+            {
+                <img src="@Model.SignatureData" alt="توقيع @Model.GuestName" class="witness-sig-img" />
+            }
+            else if (Model.SignatureData.StartsWith("typed:"))
+            {
+                <span class="witness-sig-calligraphy">@Model.SignatureData.Substring(6)</span>
+            }
+        </div>
+    }
+
+    <div class="wish-card-divider"></div>
+    <div class="wish-card-footer">
+        <span class="wish-author-title" title="@Model.GuestName">@Model.GuestName</span>
+        <div class="wish-pills-row">
+            <span class="wish-status-badge">@Model.AttendanceStatus</span>
+            @if (Model.CompanionsCount > 0)
+            {
+                <span class="witness-companions-badge">+ @AhmedHeroWedding.Services.WeddingDataService.ToEasternArabicDigits(Model.CompanionsCount) مرافق</span>
+            }
+        </div>
+    </div>
+</div>

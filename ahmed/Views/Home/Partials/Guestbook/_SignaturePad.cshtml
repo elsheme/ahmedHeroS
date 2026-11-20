@@ -1,0 +1,36 @@
+@model AhmedHeroWedding.Models.WeddingPageViewModel
+
+<div class="form-group-editorial">
+    <label class="form-label-editorial">@Model.Config.Ui.SignatureLabel</label>
+    <input type="hidden" id="SignatureData" name="SignatureData" value="" />
+    <input type="hidden" id="SignatureType" name="SignatureType" value="drawn" />
+
+    <div class="signature-section-wrapper">
+        <div class="signature-mode-tabs">
+            <button type="button" id="sig-mode-draw" class="sig-mode-tab active">
+                <span>@Model.Config.Ui.SigModeDraw</span>
+            </button>
+            <button type="button" id="sig-mode-type" class="sig-mode-tab">
+                <span>@Model.Config.Ui.SigModeType</span>
+            </button>
+        </div>
+
+        <div id="sig-draw-container">
+            <div class="signature-canvas-container">
+                <canvas id="signature-canvas"></canvas>
+            </div>
+            <div class="signature-actions-row">
+                <button type="button" id="sig-undo-btn" class="sig-action-btn">@Model.Config.Ui.SigUndoBtn</button>
+                <button type="button" id="sig-clear-btn" class="sig-action-btn">@Model.Config.Ui.SigClearBtn</button>
+            </div>
+        </div>
+
+        <div id="sig-type-container" style="display: none;">
+            <input type="text" id="sig-typed-name" class="input-pill-editorial" 
+                   placeholder="@Model.Config.Ui.SigTypedPlaceholder" />
+            <div class="signature-typed-preview-box">
+                <div id="sig-typed-preview" class="font-display">@Model.Config.Ui.SigTypedPreviewDefault</div>
+            </div>
+        </div>
+    </div>
+</div>

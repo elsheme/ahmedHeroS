@@ -1,0 +1,159 @@
+/* Details Section: Layout, Compact Editorial Event Card & Actions Cluster */
+.section-details-ivory {
+    background: var(--color-ivory);
+    position: relative;
+}
+
+/* F6: Single Compact Details Card with Two Rows */
+.compact-details-unified-card {
+    background: var(--color-pearl);
+    border: 1px solid var(--color-gold-border);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 8px 24px rgba(11, 46, 42, 0.08);
+    max-width: 540px;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    box-sizing: border-box;
+}
+
+.details-compact-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    text-align: right;
+}
+
+.details-compact-icon {
+    width: 46px;
+    height: 46px;
+    min-width: 46px;
+    min-height: 46px;
+    border-radius: 50%;
+    background: var(--color-emerald-deep);
+    color: var(--color-gold-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(11, 46, 42, 0.2);
+    flex-shrink: 0;
+}
+
+.details-compact-icon svg {
+    width: 22px;
+    height: 22px;
+    stroke: var(--color-gold-light);
+}
+
+.details-compact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    flex: 1;
+}
+
+.details-compact-title {
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--color-emerald-deep);
+    margin: 0 0 4px 0;
+    line-height: 1.25;
+}
+
+.details-compact-venue-name,
+.details-compact-primary-date {
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--color-emerald-deep);
+    line-height: 1.4;
+}
+
+.details-compact-muted {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: #5A645F;
+    line-height: 1.45;
+}
+
+.details-compact-time-highlight {
+    font-family: var(--font-body);
+    font-size: 0.98rem;
+    font-weight: 600;
+    color: #8A6A22;
+    margin-top: 4px;
+    line-height: 1.4;
+}
+
+.details-compact-separator {
+    height: 1px;
+    background: rgba(201, 162, 75, 0.3);
+    width: 100%;
+}
+
+/* F2: Actions Cluster Stacked on Mobile */
+.details-actions-cluster {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    margin-inline: auto;
+    margin-top: clamp(28px, 4vw, 40px);
+    margin-bottom: var(--space-xl);
+}
+
+.details-actions-cluster .btn-luxury-primary,
+.details-actions-cluster .btn-luxury-secondary {
+    width: 100%;
+    max-width: 420px;
+    height: 52px;
+    min-height: 52px;
+    border-radius: 999px;
+    font-size: 16px;
+    font-family: var(--font-body);
+    font-weight: 600;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding-inline: 20px;
+    box-sizing: border-box;
+    text-decoration: none;
+    box-shadow: 0 4px 16px rgba(11, 46, 42, 0.12);
+    transition: transform var(--speed-fast), background var(--speed-fast);
+}
+
+.details-actions-cluster .btn-luxury-primary {
+    background: var(--color-emerald-deep);
+    color: var(--color-gold-light);
+    border: 1px solid var(--color-gold-champagne);
+}
+
+.details-actions-cluster .btn-luxury-primary:hover {
+    background: var(--color-emerald-light);
+    transform: translateY(-2px);
+}
+
+.details-actions-cluster .btn-luxury-secondary {
+    background: transparent;
+    color: var(--color-emerald-deep);
+    border: 1px solid var(--color-gold-champagne);
+}
+
+.details-actions-cluster .btn-luxury-secondary:hover {
+    background: rgba(201, 162, 75, 0.08);
+    transform: translateY(-2px);
+}
+
+.details-actions-cluster .calendar-dropdown-wrapper {
+    width: 100%;
+    max-width: 420px;
+}

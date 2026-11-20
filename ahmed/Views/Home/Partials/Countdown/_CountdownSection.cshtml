@@ -1,0 +1,27 @@
+@model AhmedHeroWedding.Models.WeddingPageViewModel
+
+<section id="countdown" class="section-countdown-emerald">
+    <div class="section-container-narrow">
+        
+        <div id="countdown-pre-header">
+            <h2 class="countdown-emerald-title">@Model.Config.Ui.CountdownTitle</h2>
+            <p class="countdown-emerald-subtitle">@Model.Config.Ui.CountdownSubtitle</p>
+        </div>
+
+        <div id="wedding-countdown-timer" class="countdown-hairline-row reveal-on-scroll" data-target-date="@Model.Event.CeremonyDateTime.ToString("o")">
+            <partial name="Partials/Countdown/_CountdownUnit" model='("count-days", "أيام")' />
+            <div class="countdown-hairline-divider"></div>
+            <partial name="Partials/Countdown/_CountdownUnit" model='("count-hours", "ساعات")' />
+            <div class="countdown-hairline-divider"></div>
+            <partial name="Partials/Countdown/_CountdownUnit" model='("count-minutes", "دقائق")' />
+            <div class="countdown-hairline-divider"></div>
+            <partial name="Partials/Countdown/_CountdownUnit" model='("count-seconds", "ثواني")' />
+        </div>
+
+        <div id="countdown-celebration" class="countdown-celebration-state">
+            <h3 class="font-display countdown-celebration-title">@Model.Config.Ui.CountdownCelebrationTitle</h3>
+            <p class="countdown-celebration-quote">« @Model.Couple.BlessingQuote »</p>
+        </div>
+
+    </div>
+</section>

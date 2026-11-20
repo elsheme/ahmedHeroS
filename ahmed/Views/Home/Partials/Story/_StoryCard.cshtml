@@ -1,0 +1,37 @@
+@model (AhmedHeroWedding.Models.StoryMoment Moment, string MonogramText)
+
+<div class="story-moment-card">
+    @if (!string.IsNullOrWhiteSpace(Model.Moment.ImageUrl))
+    {
+        <div class="story-image-arched-wrapper" role="button" tabindex="0" aria-label="عرض صورة @Model.Moment.Title">
+            <img src="@Model.Moment.ImageUrl" class="story-animated-img" alt="@Model.Moment.Title" loading="lazy" />
+            <div class="story-image-overlay-grade"></div>
+            <div class="story-image-zoom-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="story-arch-placeholder" aria-hidden="true">
+            <div class="story-placeholder-inner">
+                <div class="story-placeholder-seal">
+                    <svg viewBox="0 0 80 80">
+                        <circle cx="40" cy="40" r="36" fill="none" stroke="#C9A24B" stroke-width="1.2" stroke-dasharray="3, 2" />
+                        <circle cx="40" cy="40" r="31" fill="none" stroke="#C9A24B" stroke-width="1.4" />
+                        <circle cx="40" cy="8" r="2" fill="#C9A24B" />
+                        <circle cx="40" cy="72" r="2" fill="#C9A24B" />
+                        <circle cx="8" cy="40" r="2" fill="#C9A24B" />
+                        <circle cx="72" cy="40" r="2" fill="#C9A24B" />
+                    </svg>
+                    <span class="story-placeholder-monogram">@Model.MonogramText</span>
+                </div>
+                <div class="story-placeholder-glow"></div>
+            </div>
+        </div>
+    }
+
+    <span class="story-card-number">@Model.Moment.Number</span>
+    <h3 class="story-card-title">@Model.Moment.Title</h3>
+    <p class="story-card-desc">@Model.Moment.Description</p>
+</div>

@@ -1,0 +1,111 @@
+/* ==========================================================================
+   FLOATING CONTROLS - SECTION STYLES
+   iOS Safe-Area Compliant Single 40px Music Toggle, Auto-fade on scroll
+   ========================================================================== */
+
+.floating-controls-cluster {
+    position: fixed;
+    bottom: calc(12px + env(safe-area-inset-bottom, 12px));
+    inset-inline-start: 12px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Fully hidden while intro envelope is active */
+body.envelope-active .floating-controls-cluster {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* Scrolling fade state */
+.floating-controls-cluster.is-scrolling {
+    opacity: 0.35;
+}
+
+.circular-floating-btn {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    border-radius: 50%;
+    background: var(--color-emerald-deep);
+    border: 1px solid var(--color-gold-champagne);
+    color: var(--color-gold-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 16px rgba(11, 46, 42, 0.4);
+    cursor: pointer;
+    position: relative;
+    padding: 0;
+    transition: transform var(--speed-fast), background var(--speed-fast);
+}
+
+/* 44px accessible touch hit area */
+.circular-floating-btn::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+}
+
+.circular-floating-btn:focus-visible {
+    outline: 2px solid var(--color-gold-champagne);
+    outline-offset: 3px;
+}
+
+.circular-floating-btn:hover {
+    transform: scale(1.06);
+    background: var(--color-emerald-light);
+}
+
+.circular-floating-btn svg {
+    width: 18px;
+    height: 18px;
+    stroke: currentColor;
+    fill: none;
+}
+
+/* Mini Equalizer inside Audio Button */
+.mini-equalizer-bars {
+    display: none;
+    align-items: flex-end;
+    gap: 2.5px;
+    height: 14px;
+}
+
+.mini-equalizer-bars span {
+    width: 2.5px;
+    height: 4px;
+    background: var(--color-gold-light);
+    border-radius: 1px;
+}
+
+.circular-floating-btn.playing .mini-equalizer-bars {
+    display: flex;
+}
+
+.circular-floating-btn.playing #audio-icon-muted {
+    display: none;
+}
+
+.circular-floating-btn.playing .mini-equalizer-bars span:nth-child(1) { animation: miniWave 0.7s infinite alternate ease-in-out; }
+.circular-floating-btn.playing .mini-equalizer-bars span:nth-child(2) { animation: miniWave 1.0s infinite alternate ease-in-out 0.2s; }
+.circular-floating-btn.playing .mini-equalizer-bars span:nth-child(3) { animation: miniWave 0.6s infinite alternate ease-in-out 0.4s; }
+
+@keyframes miniWave {
+    0% { height: 3px; }
+    100% { height: 13px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .circular-floating-btn.playing .mini-equalizer-bars span {
+        animation: none;
+        height: 8px;
+    }
+}

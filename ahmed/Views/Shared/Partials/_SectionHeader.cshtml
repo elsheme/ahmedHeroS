@@ -1,0 +1,9 @@
+@model (string? Eyebrow, string Title)
+@* Section Header Component with optional Eyebrow and Title *@
+@if (!string.IsNullOrWhiteSpace(Model.Eyebrow))
+{
+    <span class="section-eyebrow">@Model.Eyebrow</span>
+}
+<h2 class="section-title-editorial">
+    @Model.Title
+</h2>

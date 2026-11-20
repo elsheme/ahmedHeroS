@@ -1,0 +1,108 @@
+/* Intro Gate Overlay, Skip Button & Open Action Bar */
+#envelope-overlay {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at 50% 38%, #104037 0%, #0B2E2A 68%, #061C19 100%);
+    overflow: hidden;
+    transition: opacity 1s var(--ease-editorial), visibility 1s var(--ease-editorial);
+    perspective: 1500px;
+    touch-action: pan-y;
+}
+
+#envelope-overlay.revealed {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.envelope-ambient-bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(circle at 50% 45%, rgba(201, 162, 75, 0.08) 0%, transparent 75%);
+}
+
+.envelope-ambient-bg::before {
+    content: '';
+    position: absolute;
+    inset: max(16px, env(safe-area-inset-top, 16px));
+    border: 1px solid rgba(201, 162, 75, 0.25);
+    border-radius: 16px;
+    pointer-events: none;
+}
+
+.skip-intro-btn {
+    position: absolute;
+    top: max(1.5rem, env(safe-area-inset-top, 1.5rem));
+    inset-inline-end: max(1.5rem, env(safe-area-inset-right, 1.5rem));
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(11, 46, 42, 0.75);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(201, 162, 75, 0.4);
+    min-height: 44px;
+    min-width: 44px;
+    padding: 0.5rem 1.2rem;
+    font-family: var(--font-body);
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--color-gold-light);
+    border-radius: 40px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all var(--speed-fast);
+}
+
+.skip-intro-btn:hover {
+    color: #FFFFFF;
+    border-color: var(--color-gold-champagne);
+    background: rgba(15, 59, 51, 0.9);
+    transform: translateY(-1px);
+}
+
+.envelope-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    z-index: 20;
+}
+
+.open-invitation-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--grad-gold);
+    color: #0B2E2A;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 12px 32px;
+    min-height: 48px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    transition: transform var(--speed-fast);
+}
+
+.open-invitation-btn:hover {
+    transform: translateY(-2px);
+}
+
+.open-invitation-subtitle {
+    font-family: var(--font-body);
+    font-size: 0.92rem;
+    color: var(--color-gold-light);
+    max-width: 28ch;
+    text-align: center;
+}

@@ -1,0 +1,115 @@
+/* Story Moment Card Visuals: Architectural Placeholder & Arched Photo Frame */
+.story-arch-placeholder {
+    width: 100%;
+    height: 280px;
+    border-radius: 140px 140px 16px 16px;
+    background: radial-gradient(circle at 50% 40%, #104037 0%, #0B2E2A 70%, #061C19 100%);
+    border: 1px solid rgba(201, 162, 75, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: var(--space-md);
+    box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.4);
+}
+
+.story-placeholder-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+.story-placeholder-num {
+    font-family: var(--font-body);
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--color-gold-light);
+    margin-bottom: 12px;
+    letter-spacing: 0.1em;
+    font-variant-numeric: tabular-nums;
+}
+
+.story-placeholder-seal {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.story-placeholder-seal svg { width: 100%; height: 100%; }
+
+.story-placeholder-monogram {
+    position: absolute;
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--color-gold-light);
+}
+
+.story-placeholder-glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(201, 162, 75, 0.15) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.story-image-arched-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 290px;
+    margin: 0 auto var(--space-md) auto;
+    aspect-ratio: 4 / 5;
+    border-radius: 140px 140px 16px 16px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+    border: 1px solid var(--color-gold-champagne);
+    background: #0B2E2A;
+}
+
+.story-animated-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1);
+    filter: contrast(1.04) brightness(0.97) saturate(0.94);
+    animation: storyKenBurns 10s ease-in-out infinite alternate;
+}
+
+@keyframes storyKenBurns {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.08); }
+}
+
+.story-image-overlay-grade {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(180deg, rgba(11, 46, 42, 0.18) 0%, rgba(201, 162, 75, 0.15) 100%);
+    mix-blend-mode: soft-light;
+}
+
+.story-image-zoom-badge {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(11, 46, 42, 0.75);
+    border: 1px solid var(--color-gold-champagne);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-gold-light);
+    opacity: 0.85;
+    pointer-events: none;
+}
+
+.story-image-zoom-badge svg { width: 16px; height: 16px; stroke: currentColor; stroke-width: 1.8; fill: none; }

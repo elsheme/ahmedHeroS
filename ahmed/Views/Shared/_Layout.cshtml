@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+    <title>عقد قران — أحمد & سارة</title>
+    <meta name="description" content="تتشرف عائلتانا بدعوتكم لحضور عقد قران أحمد & سارة — الخميس ١٥ أبريل ٢٠٢٧ م (٨ ذو القعدة ١٤٤٨ هـ) في قاعة اللؤلؤة، فندق الماسة." />
+    <meta property="og:title" content="عقد قران أحمد & سارة" />
+    <meta property="og:description" content="حضوركم يكمل بركة عقدنا — الخميس ١٥ أبريل ٢٠٢٧ م (٨ ذو القعدة ١٤٤٨ هـ)" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/Home/OgImage" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="عقد قران أحمد & سارة" />
+    <meta name="twitter:description" content="تتشرف عائلتانا بدعوتكم لحضور عقد قران أحمد & سارة" />
+    <meta name="twitter:image" content="/Home/OgImage" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Amiri:wght@400;700&family=Aref+Ruqaa:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="~/css/tokens.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/base.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/shared/animations.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/shared/buttons.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/shared/dividers.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/shared/lightbox.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/shared/botanical-roses.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/sections/intro.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/sections/envelope-stage.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/sections/envelope-flaps.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/sections/wax-seal.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/sections/floating-controls.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/sections/hero.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/sections/hero-names.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/sections/countdown.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/sections/details.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/sections/practical-info.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/sections/map-card.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/sections/story.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/sections/story-card.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/sections/dua-banner.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/sections/rsvp-form.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/sections/signature-pad.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/sections/wishes-feed.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/sections/closing.css" asp-append-version="true" />
+</head>
+<body class="envelope-active">
+    <canvas id="petals-canvas" aria-hidden="true"></canvas>
+
+    @RenderBody()
+
+    <partial name="Partials/_LightboxModal" />
+    <partial name="Partials/FloatingControls/_FloatingControls" />
+
+    <script src="~/js/petals/petals-particle.js" asp-append-version="true"></script>
+    <script src="~/js/petals/petals-engine.js" asp-append-version="true"></script>
+    <script src="~/js/audio/ambient-audio.js" asp-append-version="true"></script>
+    <script src="~/js/intro/rose-bloom.js" asp-append-version="true"></script>
+    <script src="~/js/intro/envelope-intro.js" asp-append-version="true"></script>
+    <script src="~/js/hero/botanical-vines.js" asp-append-version="true"></script>
+    <script src="~/js/countdown/countdown.js" asp-append-version="true"></script>
+    <script src="~/js/details/calendar-menu.js" asp-append-version="true"></script>
+    <script src="~/js/story/lightbox.js" asp-append-version="true"></script>
+    <script src="~/js/guestbook/duaa-counter.js" asp-append-version="true"></script>
+    <script src="~/js/guestbook/companions-stepper.js" asp-append-version="true"></script>
+    <script src="~/js/guestbook/signature-pad.js" asp-append-version="true"></script>
+    <script src="~/js/guestbook/signature-modes.js" asp-append-version="true"></script>
+    <script src="~/js/guestbook/rsvp-form.js" asp-append-version="true"></script>
+    <script src="~/js/common/scroll-reveal.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

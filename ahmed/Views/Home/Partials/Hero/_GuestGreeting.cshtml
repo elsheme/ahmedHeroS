@@ -1,0 +1,8 @@
+@model AhmedHeroWedding.Models.WeddingPageViewModel
+
+@if (!string.IsNullOrWhiteSpace(Model.PersonalizedGuestName))
+{
+    <div class="hero-guest-personalized-badge">
+        <span>ضيفنا الكريم @Model.PersonalizedGuestName، يشرفنا حضورك</span>
+    </div>
+}

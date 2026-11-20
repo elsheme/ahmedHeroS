@@ -1,0 +1,60 @@
+/* ==========================================================================
+   LIGHTBOX MODAL - SHARED COMPONENT
+   Photo Lightbox Modal with Deep Emerald Backdrop & Pointed Arch Frame
+   ========================================================================== */
+
+.lightbox-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(11, 46, 42, 0.94);
+    backdrop-filter: blur(8px);
+    z-index: 999999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-md);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s var(--ease-editorial), visibility 0.3s;
+}
+
+.lightbox-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lightbox-image {
+    max-width: 90vw;
+    max-height: 80vh;
+    border-radius: 120px 120px 16px 16px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+    border: 1px solid var(--color-gold-champagne);
+    object-fit: cover;
+}
+
+.lightbox-caption {
+    color: var(--color-gold-light);
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    margin-top: var(--space-md);
+    text-align: center;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    color: #FFFFFF;
+    font-size: 2.2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    line-height: 1;
+    padding: 8px;
+    transition: color var(--speed-fast);
+}
+
+.lightbox-close:hover {
+    color: var(--color-gold-champagne);
+}

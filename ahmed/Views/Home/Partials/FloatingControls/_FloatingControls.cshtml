@@ -1,0 +1,23 @@
+@model AhmedHeroWedding.Models.WeddingPageViewModel
+@* Floating Controls: Replay Invitation and Audio Toggle *@
+<div class="floating-controls-cluster">
+    <!-- Compact Audio Circular Button with Mini Animated Equalizer -->
+    <button id="audio-control-btn" class="circular-floating-btn" title="تشغيل/إيقاف الموسيقى" aria-label="تشغيل/إيقاف الموسيقى">
+        <svg id="audio-icon-muted" class="svg-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+            <line x1="23" y1="9" x2="17" y2="15" />
+            <line x1="17" y1="9" x2="23" y2="15" />
+        </svg>
+        <div id="audio-icon-playing" class="mini-equalizer-bars" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </button>
+
+    <!-- Background Audio Track (أرواحنا كالجند تلاقت) -->
+    <audio id="wedding-audio-player" src="/audio/wedding-nasheed.m4a" preload="auto" loop playsinline>
+        <source src="/audio/wedding-nasheed.m4a" type="audio/mp4" />
+        <source src="/audio/wedding-nasheed.m4a" type="audio/x-m4a" />
+    </audio>
+</div>

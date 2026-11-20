@@ -1,0 +1,134 @@
+/* Community Dua Banner, Live Counter & Feedback Toast */
+.duaa-counter-banner {
+    background: var(--color-pearl);
+    border: 1px solid var(--color-gold-border);
+    border-radius: 24px;
+    padding: var(--space-lg);
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+    box-shadow: var(--shadow-soft);
+}
+
+.duaa-banner-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.3rem, 3.5vw, 1.7rem);
+    color: var(--color-emerald-deep);
+    margin-bottom: 6px;
+    line-height: 1.5;
+}
+
+.duaa-banner-subtitle {
+    font-size: 0.95rem;
+    color: var(--color-muted);
+    margin-bottom: var(--space-md);
+}
+
+.duaa-count-callout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: var(--space-md);
+}
+
+#duaa-counter-number {
+    font-family: var(--font-body);
+    font-size: clamp(2.5rem, 6vw, 3.2rem);
+    font-weight: 700;
+    color: var(--color-gold-text);
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+    transition: transform 0.25s ease;
+}
+
+#duaa-counter-number.counter-pop {
+    transform: scale(1.35);
+    color: var(--color-emerald-light);
+}
+
+.duaa-count-label {
+    font-size: 0.92rem;
+    font-weight: 500;
+    color: var(--color-emerald-deep);
+}
+
+.duaa-pray-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 48px;
+    min-height: 48px;
+    padding: 0 32px;
+    border-radius: 50px;
+    background: var(--color-emerald-deep);
+    color: var(--color-gold-light);
+    border: 1px solid var(--color-gold-champagne);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 8px 24px rgba(11, 46, 42, 0.25);
+    transition: all 0.25s var(--ease-editorial);
+}
+
+.duaa-pray-btn:hover {
+    background: #0F3B33;
+    transform: translateY(-2px);
+}
+
+.duaa-pray-btn.prayed,
+.duaa-pray-btn:disabled {
+    background: #0B2E2A;
+    color: var(--color-gold-light);
+    opacity: 0.7;
+    cursor: default;
+    pointer-events: none;
+    transform: none;
+    box-shadow: none;
+}
+
+.counter-fade-roll {
+    animation: counterFadeRoll 300ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes counterFadeRoll {
+    0% { transform: translateY(8px); opacity: 0.2; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+.duaa-floating-particle {
+    position: fixed;
+    pointer-events: none;
+    z-index: 999999;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--color-gold-champagne);
+    box-shadow: 0 0 10px rgba(201, 162, 75, 0.8);
+    animation: floatAndFade 1.2s cubic-bezier(0.1, 0.8, 0.2, 1) forwards;
+}
+
+.duaa-feedback-toast {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: var(--color-emerald-deep);
+    color: var(--color-gold-light);
+    border: 1px solid var(--color-gold-champagne);
+    border-radius: 40px;
+    padding: 12px 28px;
+    font-size: 1rem;
+    box-shadow: var(--shadow-deep);
+    z-index: 999999;
+    opacity: 0;
+    transition: all 0.35s var(--ease-editorial);
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.duaa-feedback-toast.active {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+}

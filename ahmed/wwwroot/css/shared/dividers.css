@@ -1,0 +1,77 @@
+/* ==========================================================================
+   DIVIDERS - SHARED COMPONENTS
+   Hairline Gold Diamond Divider & Botanical Rose Section Dividers
+   ========================================================================== */
+
+/* 1. Hairline Diamond Gold Divider */
+.hairline-gold-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-md);
+    margin-block: var(--space-lg);
+    opacity: 0.85;
+}
+
+.hairline-gold-divider .line {
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--color-gold-champagne), transparent);
+}
+
+.hairline-gold-divider .diamond {
+    width: 6px;
+    height: 6px;
+    background-color: var(--color-gold-champagne);
+    transform: rotate(45deg);
+}
+
+/* 2. Botanical Rose Section Divider Container & SVG */
+.botanical-section-divider-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: var(--space-md);
+    position: relative;
+    z-index: 5;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.botanical-section-divider-svg {
+    width: clamp(200px, 40vw, 320px);
+    height: auto;
+    display: block;
+    filter: drop-shadow(0 2px 6px rgba(201, 162, 75, 0.15));
+}
+
+/* 3. Smooth Seam Transitions (Ivory/Cream <-> Deep Emerald) */
+.botanical-section-divider-container.seam-ivory-to-emerald {
+    height: 56px;
+    padding-block: 0;
+    background: linear-gradient(180deg, var(--color-ivory) 0%, rgba(11, 46, 42, 0.65) 48%, #0B2E2A 100%);
+    margin-block-end: -1px;
+}
+
+.botanical-section-divider-container.seam-emerald-to-ivory {
+    height: 56px;
+    padding-block: 0;
+    background: linear-gradient(180deg, #061C19 0%, rgba(11, 46, 42, 0.65) 52%, var(--color-ivory) 100%);
+    margin-block-start: -1px;
+}
+
+.botanical-section-divider-container.seam-cream-to-emerald {
+    height: 56px;
+    padding-block: 0;
+    background: linear-gradient(180deg, var(--color-cream-soft) 0%, rgba(11, 46, 42, 0.65) 48%, #0B2E2A 100%);
+    margin-block-end: -1px;
+}
+
+@media (max-width: 640px) {
+    .botanical-section-divider-container.seam-ivory-to-emerald,
+    .botanical-section-divider-container.seam-emerald-to-ivory,
+    .botanical-section-divider-container.seam-cream-to-emerald {
+        height: 52px;
+    }
+}

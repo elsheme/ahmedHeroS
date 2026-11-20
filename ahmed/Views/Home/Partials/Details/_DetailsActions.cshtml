@@ -1,0 +1,32 @@
+@model AhmedHeroWedding.Models.WeddingPageViewModel
+
+<div class="details-actions-cluster reveal-on-scroll">
+    <a href="@Model.Event.GoogleMapsUrl" target="_blank" rel="noopener noreferrer" class="btn-luxury-primary btn-maps-action">
+        <span>@Model.Config.Ui.OpenMapBtn</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="17" y1="17" x2="7" y2="7"></line>
+            <polyline points="17 7 7 7 7 17"></polyline>
+        </svg>
+    </a>
+
+    <div class="calendar-dropdown-wrapper">
+        <button id="calendar-dropdown-btn" type="button" class="btn-luxury-secondary" aria-haspopup="true" aria-expanded="false">
+            <partial name="Partials/_Icon" model='("calendar", 18, "svg-icon")' />
+            <span>@Model.Config.Ui.AddToCalendarBtn</span>
+            <partial name="Partials/_Icon" model='("chevron-down", 14, "svg-icon")' />
+        </button>
+
+        <div id="calendar-dropdown-menu" class="calendar-dropdown-menu" role="menu">
+            <a href="@Model.Event.GoogleCalendarUrl" target="_blank" rel="noopener noreferrer" class="calendar-dropdown-item" role="menuitem">
+                <partial name="Partials/_Icon" model='("clock", 16, "svg-icon")' />
+                <span>@Model.Config.Ui.GoogleCalendar</span>
+            </a>
+            <a href="/Home/DownloadIcs" download="Katb-Kitab-Ahmed-Sarah.ics" class="calendar-dropdown-item" role="menuitem">
+                <svg class="svg-icon" style="width: 16px; height: 16px;" viewBox="0 0 24 24">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" />
+                </svg>
+                <span>@Model.Config.Ui.AppleCalendar</span>
+            </a>
+        </div>
+    </div>
+</div>

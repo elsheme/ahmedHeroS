@@ -1,0 +1,127 @@
+/* ==========================================================================
+   BUTTONS & PILLS - SHARED COMPONENTS
+   Primary, Secondary, Gold, Attendance Pills & Counter Controls
+   ========================================================================== */
+
+/* 1. Primary Luxury Emerald Button */
+.btn-luxury-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-xs);
+    background: var(--color-emerald-deep);
+    color: #FFFFFF;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 12px 28px;
+    border-radius: 50px;
+    border: 1px solid var(--color-emerald-light);
+    box-shadow: 0 4px 15px rgba(11, 46, 42, 0.2);
+    text-decoration: none;
+    cursor: pointer;
+    min-height: 48px;
+    transition: all var(--speed-fast) var(--ease-editorial);
+}
+
+.btn-luxury-primary:hover {
+    background: var(--color-emerald-light);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(11, 46, 42, 0.3);
+    color: #FFFFFF;
+}
+
+/* 2. Secondary Luxury Outline Button */
+.btn-luxury-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-xs);
+    background: var(--color-pearl);
+    color: var(--color-emerald-deep);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 12px 28px;
+    border-radius: 50px;
+    border: 1px solid var(--color-gold-champagne);
+    text-decoration: none;
+    cursor: pointer;
+    min-height: 48px;
+    transition: all var(--speed-fast) var(--ease-editorial);
+}
+
+.btn-luxury-secondary:hover {
+    background: var(--color-ivory);
+    border-color: var(--color-gold-text);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-subtle);
+}
+
+/* 3. Gold WhatsApp Share Button */
+.btn-luxury-gold {
+    min-height: 52px;
+    padding: 12px 32px;
+    background: var(--grad-gold);
+    color: #0B2E2A;
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 1.05rem;
+    border-radius: 50px;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-decoration: none;
+    box-shadow: 0 6px 20px rgba(201, 162, 75, 0.35);
+    transition: transform var(--speed-fast), box-shadow var(--speed-fast);
+}
+
+.btn-luxury-gold:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(201, 162, 75, 0.5);
+    color: #0B2E2A;
+}
+
+/* 4. Attendance Pill Buttons */
+.attendance-pill-btn {
+    width: 100%;
+    min-height: 48px;
+    padding: 0.85rem var(--space-md);
+    border-radius: 50px;
+    border: 1px solid var(--color-gold-border);
+    background: #FAF8F5;
+    font-family: var(--font-body);
+    font-size: 0.98rem;
+    font-weight: 600;
+    color: var(--color-emerald-deep);
+    cursor: pointer;
+    transition: all var(--speed-fast);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.attendance-pill-btn.active {
+    background: var(--color-emerald-deep);
+    color: #FFFFFF;
+    border-color: var(--color-emerald-deep);
+    box-shadow: 0 4px 15px rgba(11, 46, 42, 0.25);
+}
+
+/* 5. Mobile Touch Active Feedback */
+@media (hover: none) {
+    button:active,
+    .btn-luxury-primary:active,
+    .btn-luxury-secondary:active,
+    .btn-luxury-gold:active,
+    .attendance-pill-btn:active,
+    .counter-btn-circle:active,
+    .action-pill-btn:active,
+    .duaa-counter-btn:active,
+    .circular-floating-btn:active {
+        transform: scale(0.98);
+    }
+}

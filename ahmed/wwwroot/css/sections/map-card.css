@@ -1,0 +1,111 @@
+/* Calendar Dropdown & Styled Map Frame */
+.calendar-dropdown-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.calendar-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    left: 0;
+    min-width: 220px;
+    background: var(--color-pearl);
+    border: 1px solid var(--color-gold-border);
+    border-radius: 16px;
+    padding: var(--space-xs);
+    box-shadow: var(--shadow-elevated);
+    z-index: 100;
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.calendar-dropdown-menu.active {
+    display: flex;
+    animation: fadeInDown 0.25s var(--ease-editorial);
+}
+
+.calendar-dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    padding: 10px 14px;
+    min-height: 44px;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--color-ink);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background var(--speed-fast);
+}
+
+.calendar-dropdown-item:hover {
+    background: var(--color-cream-soft);
+    color: var(--color-emerald-deep);
+}
+
+/* Styled Arch-Topped Non-Trapping Map Frame */
+.styled-map-frame {
+    position: relative;
+    height: clamp(240px, 60vw, 300px);
+    border-radius: 40px 40px 16px 16px;
+    overflow: hidden;
+    border: 1px solid rgba(201, 162, 75, 0.4);
+    box-shadow: var(--shadow-card);
+    background: #E8ECEB;
+    margin-top: var(--space-md);
+}
+
+.styled-map-frame iframe {
+    width: 100%;
+    height: calc(100% + 55px);
+    margin-top: -55px;
+    border: none;
+    display: block;
+    pointer-events: none;
+    filter: saturate(0.55) sepia(0.15) hue-rotate(120deg) brightness(1.02);
+}
+
+/* Transparent Overlay Link Covering the Whole Map */
+.map-overlay-link {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 16px;
+    text-decoration: none;
+    z-index: 3;
+    cursor: pointer;
+}
+
+/* Single Bottom Pill "افتح في الخرائط" */
+.map-location-tag {
+    background: var(--color-ivory);
+    border: 1px solid var(--color-gold-champagne);
+    border-radius: 999px;
+    height: 44px;
+    min-height: 44px;
+    padding: 0 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-emerald-deep);
+    box-shadow: 0 4px 16px rgba(11, 46, 42, 0.18);
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+    pointer-events: auto;
+}
+
+.map-overlay-link:hover .map-location-tag,
+.map-location-tag:hover {
+    background: var(--color-emerald-deep);
+    color: var(--color-gold-light);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(11, 46, 42, 0.3);
+}

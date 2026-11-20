@@ -1,0 +1,51 @@
+@model AhmedHeroWedding.Models.WeddingPageViewModel
+
+<div class="editorial-rsvp-box reveal-on-scroll">
+    <div class="rsvp-form-header">
+        <h3 class="font-display rsvp-form-title">@Model.Config.Ui.RsvpFormTitle</h3>
+        <p class="rsvp-form-subtitle">@Model.Config.Ui.RsvpFormSubtitle</p>
+    </div>
+    <form id="wedding-rsvp-form" method="post" asp-action="SubmitRsvp">
+        @Html.AntiForgeryToken()
+
+        <div class="form-group-editorial">
+            <label class="form-label-editorial" for="FullName">@Model.Config.Ui.NameFieldLabel</label>
+            <input type="text" id="FullName" name="FullName" class="input-pill-editorial" required 
+                   value="@Model.PersonalizedGuestName" placeholder="@Model.Config.Ui.NameFieldPlaceholder" />
+        </div>
+
+        <div class="form-group-editorial">
+            <label class="form-label-editorial">@Model.Config.Ui.AttendanceLabel</label>
+            <input type="hidden" id="AttendanceStatusInput" name="AttendanceStatus" value="Attending" />
+            <div class="attendance-toggle-row">
+                <button type="button" class="attendance-pill-btn active" data-status="Attending">
+                    <span>@Model.Config.Ui.AttendingBtn</span>
+                </button>
+                <button type="button" class="attendance-pill-btn" data-status="Declined">
+                    <span>@Model.Config.Ui.DeclinedBtn</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="form-group-editorial">
+            <label class="form-label-editorial">@Model.Config.Ui.CompanionsLabel</label>
+            <input type="hidden" id="CompanionsCountInput" name="CompanionsCount" value="0" />
+            <div class="counter-box-editorial">
+                <button type="button" id="counter-minus" class="counter-btn-circle minus" aria-label="تقليل المرافقين" disabled aria-disabled="true">&minus;</button>
+                <span id="counter-display" class="counter-display-indic is-zero">بدون مرافقين</span>
+                <button type="button" id="counter-plus" class="counter-btn-circle plus" aria-label="زيادة المرافقين">&plus;</button>
+            </div>
+        </div>
+
+        <partial name="Partials/Guestbook/_SignaturePad" model="Model" />
+
+        <div class="form-group-editorial">
+            <label class="form-label-editorial" for="BlessingMessage">@Model.Config.Ui.MessageFieldLabel</label>
+            <textarea id="BlessingMessage" name="BlessingMessage" rows="3" class="textarea-editorial" placeholder="@Model.Config.Ui.MessageFieldPlaceholder"></textarea>
+        </div>
+
+        <button type="submit" class="btn-luxury-primary" style="width: 100%; border-radius: 50px; font-size: 1.05rem;">
+            <span>@Model.Config.Ui.SubmitRsvpBtn</span>
+        </button>
+    </form>
+</div>

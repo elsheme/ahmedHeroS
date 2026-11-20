@@ -1,0 +1,12 @@
+@model AhmedHeroWedding.Models.WeddingPageViewModel
+
+<section id="details" class="section-details-ivory">
+    <div class="section-container">
+        <partial name="Partials/_SectionHeader" model='(Model.Config.Ui.DetailsEyebrow, Model.Config.Ui.DetailsTitle)' />
+
+        <partial name="Partials/Details/_EventCards" model="Model" />
+        <partial name="Partials/Details/_PracticalInfo" model="Model" />
+        <partial name="Partials/Details/_DetailsActions" model="Model" />
+        <partial name="Partials/Details/_MapCard" model="Model" />
+    </div>
+</section>

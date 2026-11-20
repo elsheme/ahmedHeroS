@@ -1,0 +1,134 @@
+/* Practical Information Block - Clean Editorial List */
+.practical-info-block {
+    margin-top: clamp(32px, 5vw, 48px);
+    background: transparent;
+    border: none;
+    padding: 0;
+    box-shadow: none;
+    width: 100%;
+}
+
+.practical-info-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.practical-block-title {
+    font-family: var(--font-body);
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-emerald-deep);
+    margin: 0;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.practical-title-gold-bar {
+    width: 32px;
+    height: 2px;
+    background: var(--color-gold-champagne);
+    margin: 8px auto 0 auto;
+    border-radius: 1px;
+}
+
+.practical-info-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-inline: 16px;
+    box-sizing: border-box;
+}
+
+.practical-info-row {
+    padding-block: 16px;
+    text-align: right;
+}
+
+.practical-row-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 6px;
+}
+
+.practical-icon-svg {
+    width: 20px;
+    height: 20px;
+    stroke: var(--color-gold-champagne);
+    flex-shrink: 0;
+}
+
+.practical-row-title {
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-emerald-deep);
+}
+
+.practical-row-text {
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.9;
+    color: #5A645F;
+    margin: 0;
+}
+
+.practical-hairline-sep {
+    height: 1px;
+    background: rgba(201, 162, 75, 0.25);
+    width: 100%;
+}
+
+.practical-contact-actions {
+    margin-top: 14px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.btn-practical-call,
+.btn-practical-whatsapp {
+    flex: 1 1 140px;
+    min-height: 48px;
+    height: 48px;
+    padding: 0 20px;
+    border-radius: 999px;
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    box-sizing: border-box;
+    transition: all var(--speed-fast) ease;
+}
+
+.btn-practical-call {
+    background: var(--color-emerald-deep);
+    color: var(--color-gold-light);
+    border: 1px solid var(--color-emerald-light);
+    box-shadow: 0 4px 12px rgba(11, 46, 42, 0.18);
+}
+
+.btn-practical-call:hover {
+    background: var(--color-emerald-light);
+    transform: translateY(-2px);
+}
+
+.btn-practical-whatsapp {
+    background: transparent;
+    color: var(--color-emerald-deep);
+    border: 1px solid var(--color-gold-champagne);
+}
+
+.btn-practical-whatsapp:hover {
+    background: rgba(201, 162, 75, 0.08);
+    transform: translateY(-2px);
+}
+
+.btn-practical-whatsapp svg {
+    fill: currentColor;
+}

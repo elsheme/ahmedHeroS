@@ -1,0 +1,19 @@
+@model AhmedHeroWedding.Models.WeddingPageViewModel
+@{
+    ViewData["Title"] = Model.Config.PageTitle;
+}
+
+<partial name="Partials/Intro/_IntroScreen" model="Model" />
+
+<main>
+    <partial name="Partials/Hero/_HeroSection" model="Model" />
+    <partial name="Partials/_BotanicalDivider" model='"seam-ivory-to-emerald"' />
+    <partial name="Partials/Countdown/_CountdownSection" model="Model" />
+    <partial name="Partials/_BotanicalDivider" model='"seam-emerald-to-ivory"' />
+    <partial name="Partials/Details/_DetailsSection" model="Model" />
+    <partial name="Partials/_BotanicalDivider" />
+    <partial name="Partials/Story/_StorySection" model="Model" />
+    <partial name="Partials/Guestbook/_GuestbookSection" model="Model" />
+    <partial name="Partials/_BotanicalDivider" model='"seam-cream-to-emerald"' />
+    <partial name="Partials/Closing/_ClosingSection" model="Model" />
+</main>

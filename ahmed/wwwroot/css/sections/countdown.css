@@ -1,0 +1,98 @@
+/* Countdown Section (Deep Emerald & Typographic Hairline Row) */
+.section-countdown-emerald {
+    background: var(--grad-emerald-dark);
+    color: #FFFFFF;
+    border-block: none;
+    padding-block: clamp(64px, 8vw, 92px);
+    text-align: center;
+    position: relative;
+}
+
+.countdown-emerald-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    font-weight: 700;
+    color: var(--color-gold-light);
+    margin-bottom: var(--space-xs);
+}
+
+.countdown-emerald-subtitle {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: rgba(232, 211, 160, 0.92);
+    margin-bottom: var(--space-2xl);
+}
+
+.countdown-hairline-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 680px;
+    margin-inline: auto;
+    font-variant-numeric: tabular-nums;
+}
+
+.countdown-unit {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-inline: var(--space-sm);
+    font-variant-numeric: tabular-nums;
+}
+
+.countdown-digit {
+    font-family: var(--font-body);
+    font-size: clamp(40px, 8vw, 72px);
+    font-weight: 700;
+    color: #FFFFFF;
+    line-height: 1;
+    margin-bottom: var(--space-xs);
+    font-variant-numeric: tabular-nums;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease-out;
+}
+
+.countdown-digit.rolling {
+    transform: translateY(-10px);
+    opacity: 0.25;
+}
+
+.countdown-label-ar {
+    font-family: var(--font-body);
+    font-size: clamp(13px, 1.6vw, 15px);
+    font-weight: 500;
+    color: var(--color-gold-light);
+    letter-spacing: 0.05em;
+}
+
+.countdown-hairline-divider {
+    width: 1px;
+    height: 48px;
+    background: rgba(201, 162, 75, 0.3);
+}
+
+.countdown-celebration-state {
+    display: none;
+    max-width: 580px;
+    margin-inline: auto;
+    padding: var(--space-xl);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--color-gold-champagne);
+    border-radius: 16px;
+}
+
+.countdown-celebration-state.active {
+    display: block;
+    animation: fadeIn 0.8s ease;
+}
+
+.countdown-celebration-title {
+    color: var(--color-gold-light);
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.countdown-celebration-quote {
+    color: #FFFFFF;
+    font-size: 1.15rem;
+}
